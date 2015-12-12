@@ -1,0 +1,22 @@
+.padding {
+	height: 20px;
+}
+
+#search_button {
+	background: #00CCCC;
+	color: #FFF;
+	border-color: #00CCCC !important;
+}
+
+#search_button:hover {
+	background: #00CCCC;
+}
+
+[name="page"] {
+	padding: 10px;	
+}
+
+ body {
+            padding-top: 50px;
+            /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+  }
