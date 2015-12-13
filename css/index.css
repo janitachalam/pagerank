@@ -12,10 +12,6 @@ button {
 	background: #00CCCC;
 }
 
-[name="page"] {
-	padding: 10px;	
-}
-
  body {
     padding-top: 50px;
 }
@@ -34,4 +30,8 @@ button {
 #matrix_col, #vector_col {
 	border-radius: 10px !important;
 	
+}
+
+.list-group-item {
+	height: 60px !important;
 }
