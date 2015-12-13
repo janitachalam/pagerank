@@ -8,9 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
-
-    <title>PageRank Example</title>
+    <link rel="icon" type="image/png" href="favicomatic/favicon-32x32.png" sizes="32x32"/>
+    <link rel="icon" type="image/png" href="favicomatic/favicon-16x16.png" sizes="16x16"/>
+    <title>pageranker</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -18,7 +18,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <style>
-       
+
     </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -29,27 +29,43 @@
         <![endif]-->
 
     </head>
-
     <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                 <h1>pageranker</h1> 
+             </div>
+         </div>
+         <!-- /.row -->
+         <div class="padding"></div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-lg-12 text-center">
-           <h1>pageranker</h1> 
-       </div>
-   </div>
-   <!-- /.row -->
-   <div class="padding"></div>
+         <div class="row">
+           <div class="col-lg-4 col-lg-offset-4">
+            <div class="input-group">
+              <span class="input-group-btn">
+                <button class="btn btn-default" id="search_button" type="button">Search</button>
+            </span>
+            <input type="text" class="form-control" id="search_bar" placeholder="What are you looking for?">
+        </div><!-- /input-group -->
+    </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->
 
-   <div class="row">
-     <div class="col-lg-4 col-lg-offset-4">
-        <div class="input-group">
-          <span class="input-group-btn">
-            <button class="btn btn-default" id="search_button" type="button">Search</button>
-        </span>
-        <input type="text" class="form-control" id="search_bar" placeholder="What are you looking for?">
-    </div><!-- /input-group -->
-</div><!-- /.col-lg-6 -->
+<div class="padding"></div>
+<div class="row">
+   <div class="col-lg-6" id="matrix_col">
+    <div class="input-group">
+      <span class="input-group-btn">
+        <button class="btn btn-default img-rounded" type="button" id="matrix_button">Matrix</button>
+    </span>
+</div>
+</div>
+<div class="col-lg-6" id="vector_col">
+    <div class="input-group">
+       <span class="input-group-btn">
+        <button class="btn btn-default img-rounded" type="button" id="vector_button">Vector</button>
+    </span>
+</div> <!-- /input-group -->
+</div><!-- /.col-lg-6 --> 
 </div><!-- /.row -->
 
 </div>
@@ -57,8 +73,55 @@
 <div class="padding"></div>
 <div class="padding"></div>
 
+<div class="container" style="display: none" id="matrix_display">
+    <div class="row">
+        <div class="col-lg-6 col-lg-offset-3"</div>
+          <h2>Link Matrix</h2>           
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th></th>
+                <th>A</th>
+                <th>B</th>
+            </tr>
+            <tr>
+                <th>A</th>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <th>B</th>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+        </thead>
+    </table>
+</div>
+</div>
+</div>
+
+<div class="container" style="display: none" id="vector_display">
+    <div class="row">
+        <div class="col-lg-6 col-lg-offset-3"</div>
+          <h2>Probability Vector</h2>           
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>A</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>B</th>
+                <td></td>
+            </tr>
+        </thead>
+    </table>
+</div>
+</div>
+</div>
+
 <div class="container col-lg-4 col-lg-offset-4">
-<!-- search results -->
+    <!-- search results -->
     <div class="row" id="1" name="page"></div>
     <div class="row" id="2" name="page"></div>
     <div class="row" id="3" name="page"></div>

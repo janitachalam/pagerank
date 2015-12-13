@@ -7,10 +7,34 @@ var pageRank = (function() {
 			cols[i] = 1/numPages;
 			}
 		}
+
+		$("#search_button").click(function() {
+		$("#search_bar").val("");
+		var pageDivs = $("[name='page']");
+		var pages = getRankedPages();
+		$(pageDivs).each(function(index){
+			$(this).html(pages[index]);
+		});
 	});
 
-	var numPages = 10;
-	var pages = [];
+	$("#matrix_button").hover(function() {
+		$("#matrix_display").show();
+	}, function() {
+		$("#matrix_display").hide();
+	});
+
+	$("#vector_button").hover(function() {
+		$("#vector_display").show();
+	}, function() {
+		$("#vector_display").hide();
+	});
+
+	});
+
+	var numPages = 3;
+	var pages = {"http://www.michaeljackson.com/us/": [1000, 1000], 
+	"https://en.wikipedia.org/wiki/Michael_Jackson": [1400, 1400],
+	"https://www.facebook.com/Michael-Jackson-Heating-and-Plumbing-Engineer-189975057767412/": [20, 20]};
 	var rankMatrix;
 
 	function Page(headline, rank, description) {
@@ -19,12 +43,11 @@ var pageRank = (function() {
 		this.description = description;
 	}
 
-	$("#search_button").click(function() {
-		var pageDivs = $("[name='page']");
-		var pages = getRankedPages();
-		$(pageDivs).each(function(index){
-			$(this).html(pages[index]);
-		});
+
+	$("body").keyup(function(event){
+    if(event.keyCode == 13){
+        $("#search_button").click();
+    	}
 	});
 
 	function getRankedPages() {
