@@ -17,9 +17,9 @@ var pageRank = (function() {
 
 		$("#matrix_button").hover(function() {
 			$("#results_list").hide();
-			$("#matrix_display").show();
+			$("#link_graph").show();
 		}, function() {
-			$("#matrix_display").hide();
+			$("#link_graph").hide();
 		});
 
 		$("#vector_button").hover(function() {
@@ -49,8 +49,7 @@ var pageRank = (function() {
 	var pages = [
 	new Page("Michael Jackson, Heating and Plumbing Engineer - Facebook", "https://www.facebook.com/Michael-Jackson-Heating-and-Plumbing-Engineer-189975057767412/"),
 	new Page("Michael Jackson | The Official Michael Jackson Site", "http://www.michaeljackson.com/us/"),
-	new Page("Michael Jackson - Wikipedia, the free encyclopedia", "https://en.wikipedia.org/wiki/Michael_Jackson"),
-	];
+	new Page("Michael Jackson - Wikipedia, the free encyclopedia", "https://en.wikipedia.org/wiki/Michael_Jackson")];
 	var vectorOne = [0.333, 0.333, 0.333];
 	var vectorTwo = [1.283, 1.056, 0.667];
 	var vectorThree = [1.2351, 0.96, 0.804];
