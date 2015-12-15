@@ -85,7 +85,7 @@ var pages = [pagesOne, pagesTwo, pagesThree];
 
 var vectorOne = [0.25, 0.25, 0.25, 0.25];
 var vectorTwo = [0.33, 0.39, 0.16, 0.12];
-var vectorThree = [0.38, 0.12, 0.29, 0.19];
+var vectorThree = [0.38, 0.19, 0.29, 0.12];
 
 var vectors = [vectorOne, vectorTwo, vectorThree];
 var currentVector = 0;
