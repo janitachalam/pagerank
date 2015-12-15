@@ -73,10 +73,10 @@ function Page(title, link, rank) {
 }
 
 var numPages = 3;
-var pageFour = new Page("Michael Jackson, Plumbing Engineer - Facebook", "https://www.facebook.com/Michael-Jackson-Heating-and-Plumbing-Engineer-189975057767412/");
-var pageTwo = new Page("Michael Jackson - Google+", "https://plus.google.com/+MichaelJackson/posts");
-var pageOne = new Page("Michael Jackson - Wikipedia, the free encyclopedia", "https://en.wikipedia.org/wiki/Michael_Jackson");
-var pageThree = new Page("keep-michaeling.com: Michael Jackson fanpage", "keep-michaeling.com: Michael Jackson fanpage");
+var pageFour = new Page("[4] Michael Jackson, Plumbing Engineer - Facebook", "https://www.facebook.com/Michael-Jackson-Heating-and-Plumbing-Engineer-189975057767412/");
+var pageTwo = new Page("[2] Michael Jackson - Google+", "https://plus.google.com/+MichaelJackson/posts");
+var pageOne = new Page("[1] Michael Jackson - Wikipedia, the free encyclopedia", "https://en.wikipedia.org/wiki/Michael_Jackson");
+var pageThree = new Page("[3] keep-michaeling.com: Michael Jackson fanpage", "keep-michaeling.com: Michael Jackson fanpage");
 
 var pagesOne = [pageFour, pageThree, pageTwo, pageOne];
 var pagesTwo = [pageTwo, pageOne, pageThree, pageFour];
