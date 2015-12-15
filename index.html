@@ -50,12 +50,12 @@
     			</div><!-- /.col-lg-6 -->
     		</div><!-- /.row -->
 
-    		<div class="padding"></div>
+    	<!-- 	<div class="padding"></div>
     		<div class="row">
     			<div class="col-lg-4" id="matrix_col">
     				<div class="input-group">
     					<span class="input-group-btn">
-    						<button class="btn btn-default img-rounded" type="button" id="matrix_button">Matrix</button>
+    						<button class="btn btn-default img-rounded" type="button" id="graph_button">Graph</button>
     					</span>
     				</div>
     			</div>
@@ -64,26 +64,47 @@
     					<span class="input-group-btn">
     						<button class="btn btn-default img-rounded" type="button" id="vector_button">Vector</button>
     					</span>
-    				</div> <!-- /input-group -->
-    			</div><!-- /.col-lg-6 --> 
+    				</div> 
+    			</div>
     			<div class="col-lg-4" id="rank_col">
     				<div class="input-group">
     					<span class="input-group-btn">
     						<button class="btn btn-default img-rounded" type="button" id="rank_button">Rank</button>
     					</span>
-    				</div> <!-- /input-group -->
-    			</div><!-- /.col-lg-6 --> 
-    		</div><!-- /.row -->
+    				</div>
+    			</div>
+    		</div> -->
 
-    	</div>
-    	<!-- /.container -->
-    	<div class="padding"></div>
-    	<div class="padding"></div>
-        <img src="graph.png" alt="Link Graph" id="link_graph" style="width:304px;height:228px; display:none !important; text-align: center">
-    	<div class="container" style="display: none" id="matrix_display">
+            <div class="padding"></div>
+
+            <div class="row">
+                <div class="col-sm-offset-4 col-sm-4 text-center">
+                    <div class="btn-group" data-toggle="buttons">
+                        <label class="btn btn-default center-block" id="graph_button"><input type="radio">Graph</label>
+                        <label class="btn btn-default center-block" id="vector_button"><input type="radio">Vector</label>
+                        <label class="btn btn-default center-block" id="rank_button"><input type="radio">Rank!</label>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- /.container -->
+        <div class="padding"></div>
+        <div class="padding"></div>
+
+        <div class="container" id="link_graph" style="display: none">
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-4"> 
+                    <img src="link_graph.png" alt="Link Graph" style="width:350px;height:340px;">
+                </div>
+            </div>
+        </div>
+
+    <!-- 	<div class="container" style="display: none" id="matrix_display">
     		<div class="row">
-    			<div class="col-lg-6 col-lg-offset-3"</div>
-    				<h2>Link Matrix</h2>           
+    			<div class="col-lg-2 col-lg-offset-5"</div>
+    				<h2></h2>           
     				<table class="table table-bordered">
     					<thead>
     						<tr>
@@ -138,32 +159,28 @@
     				</table>
     			</div>
     		</div>
-    	</div>
+    	</div> -->
 
     	<div class="container" style="display: none" id="vector_display">
     		<div class="row">
     			<div class="col-lg-2 col-lg-offset-5"</div>
-    				<h2>Probability Vector</h2>           
+    				<h4 style="text-align: center">pageranks</h4>           
     				<table class="table table-bordered">
     					<thead>
     						<tr>
-    							<th>A</th>
+    							<th>1</th>
     							<td></td>
     						</tr>
     						<tr>
-    							<th>B</th>
+    							<th>2</th>
     							<td></td>
     						</tr>
     						<tr>
-    						<th>C</th>
+    						<th>3</th>
     							<td></td>
     						</tr>
     						<tr>
-    							<th>D</th>
-    							<td></td>
-    						</tr>
-    						<tr>
-    							<th>E</th>
+    							<th>4</th>
     							<td></td>
     						</tr>
     					</thead>
@@ -173,11 +190,13 @@
     	</div>
 
     	<ul class="list-group container col-lg-4 col-lg-offset-4" style="display:none" id="results_list">
-    		<li class="list-group-item"><a href="google.com"></li>
+    		<li class="list-group-item"><a href=""></a></li>
     		<div class="padding"></div>
-    		<li class="list-group-item"></li>
+    		<li class="list-group-item"><a href=""></a></li>
     		<div class="padding"></div>
-    		<li class="list-group-item"></li>
+    		<li class="list-group-item"><a href=""></a></li>
+            <div class="padding"></div>
+            <li class="list-group-item"><a href=""></a></li>
 <!-- div class="padding"></div>
   <li class="list-group-item"></li>
   <div class="padding"></div>
